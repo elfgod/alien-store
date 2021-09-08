@@ -11,7 +11,7 @@ router.get('/new', function(req, res, next) {
     res.send('INDEX /posts/new');
 });
 
-/* POST posts create /posts/new */
+/* POST posts create /posts/ */
 router.post('/', function(req, res, next) {
     res.send('CREATE /posts');
 });
@@ -27,7 +27,7 @@ router.get('/:id/edit', function(req, res, next) {
 });
 
 /* PUT posts update /posts/:id */
-router.put('/:id/', function(req, res, next) {
+router.put('/:id', function(req, res, next) {
     res.send('UPDATE /posts/:id');
 });
 
