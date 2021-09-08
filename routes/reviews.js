@@ -1,5 +1,5 @@
 const express = require('express');
-const router = express.Router();
+const router = express.Router({ mergeParams: true });
 // mergeParams let's you pull the :id from the app.js app.use middleware
 
 /* GET reviews index /posts/:id/reviews */
@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
 
 /* POST reviews create /posts/:id/reviews */
 router.post('/', function(req, res, next) {
-    res.send('CREATE /reviews');
+    res.send('CREATE /posts/:id/reviews');
 });
 
 /* GET reviews edit /posts/:id/reviews/:review_id/edit */
@@ -30,11 +30,9 @@ router.delete('/:review_id', function(req, res, next) {
 module.exports = router;
 
 /*
-GET index       /reviews
-GET new         /reviews/new
-POST create     /reviews
-GET show        /reviews/:id
-GET edit        /reviews/:id/edit
-PUT update      /reviews/:id
-DELETE destroy  /reviews/:id
+GET index       /posts/:id/reviews
+POST create     /posts/:id/reviews
+GET edit        /posts/:id/reviews/:review_id/edit
+PUT update      /posts/:id/reviews/:review_id
+DELETE destroy  /posts/:id/reviews/:review_id
 */
