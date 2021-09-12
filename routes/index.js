@@ -41,8 +41,8 @@ router.get('/forgot', function(req, res, next) {
   res.send('GET /forgot');
 });
 
-/* PUT /forgot/:token */
-router.put('/forgot/:token', function(req, res, next) {
+/* PUT /forgot */
+router.put('/forgot', function(req, res, next) {
   res.send('PUT /forgot');
 });
 

@@ -1,9 +1,10 @@
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
-const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const cookieParser = require('cookie-parser');
 
+// Require routes
 const indexRouter   = require('./routes/index');
 const postsRouter   = require('./routes/posts');
 const reviewsRouter = require('./routes/reviews');
@@ -20,6 +21,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+// Mount routes
 app.use('/', indexRouter);
 app.use('/posts/:id/reviews', reviewsRouter);
 app.use('/posts', postsRouter);

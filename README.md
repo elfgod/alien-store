@@ -3,6 +3,8 @@
 ### Dependencies
 // npm i mongoose
 // npm i passport
+// npm i passport passport-local passport-local-mongoose
+// npm i express-session
 
 ### Dev Dependencies
 // npm -D locus
