@@ -1,6 +1,7 @@
 
 
 ### Dependencies
+// npx express-generator --view=ejs alien-shop
 // npm i mongoose
 // npm i passport
 // npm i passport passport-local passport-local-mongoose
