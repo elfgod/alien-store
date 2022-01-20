@@ -23,7 +23,7 @@ module.exports = {
     },
     // GET /logout
     getLogout(req, res, next) {
-         req.logout();
-        res.redirect('/');
+      req.logout();
+      res.redirect('/');
       }
 }
