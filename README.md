@@ -6,6 +6,7 @@ npm i mongoose
 npm i passport
 npm i passport-local passport-local-mongoose
 npm i express-session
+npm i method-override
 ```
 
 ### Dev Dependencies
